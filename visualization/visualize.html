@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortify - Sorting Visualizer</title>
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="../src/script.js" type="module"></script>
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="container">
+            <img src="../img/nav.svg" class="hambar hidden">
+            <img src="../img/logo.svg" class="logo" title="Double tap to start/end 'speech to command'">
+
+            <a href="https://ujjwal-paul.github.io/PATHWAY/" target="_blank" class="btn norm">Visit Pathfinding
+                Visualizer
+            </a>
+        </div>
+
+        <div class="left-nav hidden">
+            <a href="https://ujjwal-paul.github.io/PATHWAY/" target="_blank" class="left-nav-btn">Visit Pathfinding
+                Visualizer
+            </a>
+        </div>
+    </nav>
+
+    <div class="container main">
+
+        <div class="actions">
+            <div class="parts">
+                <div class="actn create">Create Array</div>
+
+                <select class="actn algo">
+                    <option disabled selected>Algorithms</option>
+                    <option value="bubble">1. Bubble Sort</option>
+                    <option value="selection">2. Selection Sort</option>
+                    <option value="insertion">3. Insertion Sort</option>
+                    <option value="merge">4. Merge Sort</option>
+                    <option value="quick">5. Quick Sort</option>
+                    <option value="heap">6. Heap Sort</option>
+                    <option value="shell">7. Shell Sort</option>
+                    <option value="bogo">8. Bogo Sort ♾️</option>
+                    <option value="gnome">9. Gnome Sort</option>
+                    <option value="pancake">10. Pancake Sort</option>
+                    <option value="cocktail">11. Cocktail Sort</option>
+                    <option value="odd even">12. Odd Even Sort</option>
+                </select>
+
+                <div class="actn inc-dup">Increase Duplicates</div>
+                <div class="actn shuffle">Shuffle</div>
+                <div class="actn run">Run</div>
+            </div>
+            <div class="parts">
+                <div class="range-inp">
+                    <input type="range" min="1" max="80" value="4" class="speed">
+                    <p>Speed 1x</p>
+                </div>
+
+                <div class="range-inp">
+                    <input type="range" min="10" max="50" value="20" class="array-size">
+                    <p>Array Size 20</p>
+                </div>
+            </div>
+
+            <div class="extra-run run hidden">Run</div>
+            <div class="drop-down"></div>
+        </div>
+
+        <div class="board">
+            <div class="bar-space"></div>
+        </div>
+
+
+        <div class="info-box">
+            <div class="info">
+
+                <div class="description">
+                    <h2>DESCRIPTION</h2>
+
+                    <p>
+                        Welcome to the Sorting Visualizer! This tool allows you to see how various sorting algorithms
+                        work by visually demonstrating their step-by-step processes. You can explore how different
+                        methods, from simple ones like Bubble Sort to more complex ones like Quick Sort, handle the task
+                        of organizing a list.<br>
+                        With interactive visuals, you can easily compare the efficiency and behavior of each algorithm
+                        in real-time. Whether you’re learning about sorting for the first time or looking to deepen your
+                        understanding, our visualizer provides a clear and engaging way to see how these algorithms
+                        operate and their strengths and weaknesses.
+                    </p>
+
+                </div>
+
+                <div class="cx-table">
+                    <div class="table-box">
+                        <h2>COMPLEXITY</h2>
+                        <table>
+                            <tr>
+                                <th>Best Case</th>
+                                <td class="best">Varies</td>
+                            </tr>
+                            <tr>
+                                <th>Average Complexity</th>
+                                <td class="average">Varies</td>
+                            </tr>
+                            <tr>
+                                <th>Worst Case</th>
+                                <td class="worst">Varies</td>
+                            </tr>
+                            <tr>
+                                <th>Space Complexity</th>
+                                <td class="space">Varies</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="code-section">
+                <h2>IMPLEMENTATION</h2>
+
+                <div class="code-box">
+                    <div class="lang">
+                        <div class="c-lang selected" type="c"></div>
+                        <div class="cpp-lang" type="cpp"></div>
+                        <div class="java-lang " type="java"></div>
+                        <div class="python-lang" type="python"></div>
+                        <div class="js-lang" type="js"></div>
+                    </div>
+
+                    <div class="snippet">
+                        <pre>
+                            <code class="code"></code>
+                        </pre>
+
+                        <div class="copy-code">
+                            <img src="./../img/copy.png" class="copy-img">
+                            <img src="./../img/tick.png" class="tick-img hidden">
+                            <p>Copy Code</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="notice">
+            <p style="display: inline; color: #000; font-weight: 800;">
+                NOTE: The time taken for the visualization process of each algorithm is not indicative of its actual
+                time
+                complexity.
+            </p>
+            <p style="display: inline; color: #444; font-weight: 800;">
+                The visualization process involves displaying each step of the algorithm, which can be very
+                quick, often
+                completing in a fraction of a second. Therefore, the speed at which an algorithm's visualization
+                completes doesn't accurately represent its efficiency. To ensure clarity, delays are
+                intentionally added
+                to each algorithm's implementation to make the visualization process comprehensible to the human
+                eye.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <i>Made by <a href="https://www.linkedin.com/in/ujjwal-paul-b01ab8216/" target="_blank">@Sourav Sharma</a></i>
+    </footer>
+
+</body>
+
+</html>

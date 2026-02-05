@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+    --font: 'Nunito Sans';
+    --bg-white-1: #fff;
+    --bg-white-2: #f5f7f7;
+    --bg-white-3: #D0D9DA;
+    --bg-white-4: #F0F5F5;
+    --bg-blue-1: #0000EE;
+    --bg-blue-2: #2368fb;
+    --bg-blue-3: #3770FF;
+    --bg-blue-4: #81A2EF;
+    --bg-blue-5: #a6d7e8;
+    --bg-black-1: #20282D;
+    --bg-black-2: #273339;
+    --bg-black-3: #5C686D;
+    --bg-black-4: #8E989C;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+body {
+    background: var(--bg-white-2);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav {
+    background: var(--bg-white-1);
+    border-bottom: 1px solid var(--bg-white-3);
+}
+
+nav .mx-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 15px 10px;
+    z-index: 2
+}
+
+.logo {
+    height: min(40px, 9vw);
+}
+
+nav .side-bar {
+    height: min(25px, 9vw);
+    transition: transform .3s;
+    display: none;
+}
+
+nav .btns,
+nav .side-bar-options {
+    font-weight: 700;
+}
+
+nav .btns a {
+    margin-left: min(2vw, 30px);
+    color: var(--bg-black-3);
+}
+
+nav .btns a:hover {
+    color: var(--bg-black-1);
+}
+
+nav .side-bar-options {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    border-top: 1px solid var(--bg-white-3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    animation: sliding .2s linear 1;
+    z-index: 1;
+}
+
+@keyframes sliding {
+    from {
+        transform: translateY(-5rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav .side-bar-options a {
+    width: 100%;
+    padding: 7px 0 7px min(10%, 50px);
+    color: var(--bg-black-2);
+}
+
+nav .side-bar-options a:hover {
+    background: var(--bg-white-3);
+}
+
+nav .side-bar-options a img {
+    position: relative;
+    height: 17px;
+    margin-right: 5px;
+}
+
+@media (width < 600px) {
+    nav .btns {
+        display: none;
+    }
+
+    nav .mx-container {
+        justify-content: start;
+    }
+
+    nav .side-bar {
+        display: block;
+    }
+
+    nav .logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Main Container */
+main {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main .front-img {
+    margin: 35px auto 0 auto;
+    height: min(80vh, 40vw);
+    max-height: 650px;
+    border-radius: 10px;
+    background: linear-gradient(#3cb9d4, #219EBC, #1e7e9c);
+    color: #d5f3f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .front-img h1 {
+    font-size: min(70px, 5vw);
+    font-weight: 900;
+}
+
+main .front-img p {
+    font-size: min(20px, 2vw);
+    width: 90%;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+main .front-img .start {
+    font-size: min(20px, 2vw);
+    color: #ffffff;
+    background: linear-gradient(135deg, #00aaff, #007acc);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    padding: min(1vw, 5px) min(4vw, 20px);
+    border-radius: 10px;
+    font-weight: 700;
+    margin-top: 5%;
+}
+
+.front-img .start:hover {
+    background: linear-gradient(135deg, #007acc, #005ea6);
+    transform: translateY(-2px);
+}
+
+.front-img .start:active {
+    transform: translateY(1px);
+    background: linear-gradient(135deg, #005ea6, #003f7a);
+}
+
+/* Algo Part */
+main .choose {
+    font-size: min(25px, 6vw);
+    width: fit-content;
+    margin: 0 auto;
+    color: var(--bg-black-2);
+    margin-top: 10px;
+}
+
+main .algos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.algorithm-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    flex-grow: 1;
+}
+
+.algorithm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.algorithm-card .algo-name {
+    font-size: 1.5em;
+    color: #007acc;
+    margin: 0;
+}
+
+.algorithm-card .algo-complexity {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.algorithm-card .algo-sign {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .algorithm-card {
+        max-width: 100%;
+    }
+
+    main .algos {
+        display: block;
+    }
+}
